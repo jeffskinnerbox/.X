@@ -1,12 +1,4 @@
 !
-! Check out the follwing posts
-!   Xterm Manual Page - http://www.x.org/archive/X11R6.8.1/doc/xterm.1.html
-!   Using the .Xdefaults file - https://engineering.purdue.edu/ECN/Support/KB/Docs/UsingTheXdefaultsFil
-!   Using Configuration Files to Customize Your Windows Environment - http://h30097.www3.hp.com/docs/base_doc/DOCUMENTATION/V40F_HTML/AQ917BTE/DOCU_012.HTM
-!   Post your .Xdefaults and terminal apps color schemes with screenshot - http://crunchbang.org/forums/viewtopic.php?id=9935
-!   256-Color XTerms in Ubuntu - http://push.cx/2008/256-color-xterms-in-ubuntu
-!
-!
 ! The basic X resource syntax is expressed like:
 !
 !   <program><binding><widget><binding><widget><...><resource>:<value>
