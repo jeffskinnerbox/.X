@@ -28,3 +28,5 @@ ogg123 /usr/share/sounds/ubuntu/stereo/desktop-login.ogg &
 # place a Conky system monitoring display on the desktop background
 conky &
 
+# terminal emulation for accessing a UNIX shell in the GNOME environment.
+#gnome-terminal --geometry=80x24+600+300 & 

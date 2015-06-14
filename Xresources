@@ -17,6 +17,18 @@
 !   xrdb .Xresources
 !   xrdb -merge .Xresources
 !
+! To see the current loaded resources:
+! xrdb -query -all
+!
+! bash command to disaplay all 256 colors across the screen
+! (x=`tput op` y=`printf %76s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)
+!
+! bash command will let you discover all the terminals you have terminfo support for,
+! and the number of colors each terminal supports. The possible values are: 8, 15, 16, 52, 64, 88 and 256.
+! for T in `find /usr/share/terminfo -type f -printf '%f '`;do echo "$T `tput -T $T colors`";done|sort -nk2
+!
+! bash command to see what features that are supported by your terminal
+! infocmp -1 | sed -nu 's/^[ \000\t]*//;s/[ \000\t]*$//;/[^ \t\000]\{1,\}/!d;/acsc/d;s/=.*,//p'|column -c80
 
 *shadowWidth:                       3
 *Form.background:                   gray75
@@ -40,8 +52,9 @@
 *bottomShadowContrast:              60
 
 *customization:                     -color
-XTerm*termName:                     xterm-256color
 
+! xterm resources -------------------------------------------------------------
+XTerm*termName:                     xterm-256color
 XTerm*background:                   black
 XTerm*foreground:                   white
 XTerm*pointerColorBackground:       white
@@ -54,6 +67,7 @@ XTerm*font:                         -*-courier-*-*-normal-*-12-*-*-*-*-*-*-*
 xterm*loginShell:                   true
 xterm*saveLines:                    500
 
+! xclock resources ------------------------------------------------------------
 *xclock.foreground:                 steelblue
 *xclock.hands:                      steelblue
 *xclock.background:                 ivory
