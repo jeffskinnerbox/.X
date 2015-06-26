@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 #
+# Maintainer:   jeff.irland@gmail.com
+# Version:      1.0
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
