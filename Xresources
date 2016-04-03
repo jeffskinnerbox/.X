@@ -1,6 +1,7 @@
-! Maintainer:   jeff.irland@gmail.com
-! Version:      1.0
+! Maintainer:   jeffskinnerbox@yahoo.com / www.jeffskinnerbox.me
+! Version:      1.0.1
 !
+! DESCRIPTION:
 ! The basic X resource syntax is expressed like:
 !
 !   <program><binding><widget><binding><widget><...><resource>:<value>
@@ -14,7 +15,7 @@
 ! but also any other xterm properties that also have a "background" attribute
 ! (e.g. window background, etc), no matter where they may be in the widget hierarchy.
 !
-! Load the resources into your display's resource database with the command
+! Load the resources into your display resource database with the command
 !
 !   xrdb .Xresources
 !   xrdb -merge .Xresources
@@ -32,44 +33,52 @@
 ! bash command to see what features that are supported by your terminal
 ! infocmp -1 | sed -nu 's/^[ \000\t]*//;s/[ \000\t]*$//;/[^ \t\000]\{1,\}/!d;/acsc/d;s/=.*,//p'|column -c80
 
+
+
+! The following defaults change the behavior of clients using the X libraries
 *shadowWidth:                       3
-*Form.background:                   gray75
-*MenuButton.background:             gray75
-*SimpleMenu.background:             gray70
-*TransientShell*Dialog.background:  gray70
-*Command.background:                gray75
-*Label.background:                  gray75
+*Form.Background:                   gray75
+*MenuButton.Background:             gray75
+*SimpleMenu.Background:             gray70
+*TransientShell*Dialog.Background:  gray70
+*Command.Background:                gray75
+*Label.Background:                  gray75
 *ScrollbarBackground:               grey39
-*Scrollbar*background:              gray75
-*Scrollbar*width:                   15
-*Scrollbar*height:                  15
-*Scrollbar*shadowWidth:             2
-*Scrollbar*cursorName:              top_left_arrow
-*Scrollbar*pushThumb:               false
+*Scrollbar*Background:              gray75
+*Scrollbar*Width:                   15
+*Scrollbar*Height:                  15
+*Scrollbar*ShadowWidth:             2
+*Scrollbar*CursorName:              top_left_arrow
+*Scrollbar*PushThumb:               false
 *shapeStyle:                        Rectangle
 *beNiceToColormap:                  False
 *SmeBSB*shadowWidth:                3
 *highlightThickness:                0
 *topShadowContrast:                 40
 *bottomShadowContrast:              60
-
 *customization:                     -color
 
 ! xterm resources -------------------------------------------------------------
-XTerm*termName:                     xterm-256color
-XTerm*background:                   black
-XTerm*foreground:                   white
-XTerm*pointerColorBackground:       white
-XTerm*pointerColor:                 red
-XTerm*cursorColor:                  white
+XTerm*TermName:                     xterm-256color
+XTerm*Background:                   black
+XTerm*Foreground:                   white
+XTerm*PointerColorBackground:       white
+XTerm*PointerColor:                 red
+XTerm*CursorColor:                  white
+XTerm*ScrollBar:                    true
+XTerm*ScrollTtyOutput:              false
+XTerm*Font:                         -*-courier-*-*-normal-*-12-*-*-*-*-*-*-*
+!XTerm*Font:                         -*-Inconsolata-*-*-normal-*-12-*-*-*-*-*-*-*
+xterm*LoginShell:                   true
+xterm*SaveLines:                    500
 XTerm.vt100.geometry:               80x50
-XTerm*scrollBar:                    true
-XTerm*scrollTtyOutput:              false
-XTerm*font:                         -*-courier-*-*-normal-*-12-*-*-*-*-*-*-*
-xterm*loginShell:                   true
-xterm*saveLines:                    500
+xterm*termtype:                     vt100
+xterm*ttyModes:                     intr ^c erase ^h susp ^@ dsusp ^@ kill ^u eof ^d
 
 ! xclock resources ------------------------------------------------------------
-*xclock.foreground:                 steelblue
-*xclock.hands:                      steelblue
-*xclock.background:                 ivory
+xclock*Foreground:                  black
+xclock*Background:                  light grey
+xclock*Border:                      navy blue
+xclock*Highlight:                   cornflower blue
+xclock*Hands:                       slate blue
+xclock*Mode:                        analog

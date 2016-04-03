@@ -1,11 +1,13 @@
-#!/usr/bin/bash
+#!/bin/bash
 #
-#   This file echoes a bunch of color codes to the 
-#   terminal to demonstrate what's available.  Each 
-#   line is the color code of one foreground color,
-#   out of 17 (default + 16 escapes), followed by a 
-#   test use of that color on all nine background 
-#   colors (default + 8 escapes).
+# Maintainer:   jeffskinnerbox@yahoo.com / www.jeffskinnerbox.me
+# Version:      1.0.1
+#
+# DESCRIPTION:
+#   This file echoes a bunch of color codes to the terminal to demonstrate
+#   what's available.  Each line is the color code of one foreground color,
+#   out of 17 (default + 16 escapes), followed by a test use of that color
+#   on all nine background colors (default + 8 escapes).
 #
 # bash command to disaplay all 256 colors across the screen
 # (x=`tput op` y=`printf %76s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)

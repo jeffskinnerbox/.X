@@ -1,6 +1,7 @@
-# Maintainer:   jeff.irland@gmail.com
-# Version:      1.0
+# Maintainer:   jeffskinnerbox@yahoo.com / www.jeffskinnerbox.me
+# Version:      1.0.1
 #
+# DESCRIPTION:
 # xbindkeys configuration
 #
 # If you edit this file, do not forget to uncomment any lines that you change.
@@ -37,7 +38,7 @@
 
 # The program xbindkeys_show (shows the grabbing keys used in xbindkeys)
 # will be executed when the key conbination "control+shift + q" is pressed
-"xbindkeys_show" 
+"xbindkeys_show"
     control + shift + q
 
 # Create a Xterm window when "control + mouse button 2" is pressed

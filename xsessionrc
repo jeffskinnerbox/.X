@@ -1,7 +1,17 @@
 #!/usr/bin/env bash
 #
-# Maintainer:   jeff.irland@gmail.com
-# Version:      1.0
+# Maintainer:   jeffskinnerbox@yahoo.com / www.jeffskinnerbox.me
+# Version:      1.0.1
+#
+# DESCRIPTION:
+#    To find what desktop environment is being used:
+#
+#             echo $XDG_CURRENT_DESKTOP produces "Unity"
+#
+#    To find what window manager is being used:
+#
+#              wmctrl -m | grep Name | awk '{ print $2 }' produces Compiz
+#
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -28,7 +38,14 @@ fi
 ogg123 /usr/share/sounds/ubuntu/stereo/desktop-login.ogg &
 
 # place a Conky system monitoring display on the desktop background
-conky &
+# delay so the window manager has time to come up
+( sleep 5 ;
+if [ "$(wmctrl -m | grep Name | awk '{ print $2 }')" == "i3" ]; then   # check for type of window manager
+    cp $HOME/.conky/src/ubuntu-i3-conkyrc $HOME/.conky/conkyrc
+else
+    cp $HOME/.conky/src/ubuntu-conkyrc $HOME/.conky/conkyrc
+fi
+conky & ) &
 
 # terminal emulation for accessing a UNIX shell in the GNOME environment.
-#gnome-terminal --geometry=80x24+600+300 & 
+#gnome-terminal --geometry=80x24+600+300 &
