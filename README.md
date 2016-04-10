@@ -30,12 +30,12 @@ script, and chmod +x.
 
 CustomXSession - https://wiki.ubuntu.com/CustomXSession
 
-To debug your issues you should have a look in ~/.xsession-errors 
+To debug your issues you should have a look in ~/.xsession-errors
 
 xsessionrc is sourced by 40x11-common_xsessionrc during the start of the X session. It is intended for setting session-wide environment variables that should apply to all apps, such as locale information.
 
 If .xinitrc isn't present, then global xinitrc file /etc/X11/xinit/xinitrc will be used.
-To debug your issues you should have a look in ~/.xsession-errors 
+To debug your issues you should have a look in ~/.xsession-errors
 
 To Do
 -----

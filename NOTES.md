@@ -4,7 +4,7 @@ via [git][01] and [GitHub][02].  For more information, check out these posts:
 * [Using Git and Github to Manage Your Dotfiles][03]
 * [Managing dot files with Git][04]
 
-===
+====
 
 ### Creating Your Local Git Repository
 Store your existing .xbindkeysrc and .Xresources in the .X directory
