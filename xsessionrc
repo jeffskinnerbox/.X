@@ -4,13 +4,18 @@
 # Version:      1.0.2
 #
 # DESCRIPTION:
-#    To find what desktop environment is being used:
+#    To find what desktop environment is being used
+#    and using your using the Unity desktop environment:
 #
-#             echo $XDG_CURRENT_DESKTOP produces "Unity"
+#             echo $XDG_CURRENT_DESKTOP
+#
+#    produces "Unity"
 #
 #    To find what window manager is being used:
 #
-#              wmctrl -m | grep Name | awk '{ print $2 }' produces Compiz
+#              wmctrl -m | grep Name | awk '{ print $2 }'
+
+#    produces "Compiz"
 #
 
 userresources=$HOME/.Xresources
