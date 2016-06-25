@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Maintainer:   jeffskinnerbox@yahoo.com / www.jeffskinnerbox.me
-# Version:      1.0.2
+# Version:      1.0.3
 #
 # DESCRIPTION:
 #   This file echoes a bunch of color codes to the terminal to demonstrate
