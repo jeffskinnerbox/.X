@@ -32,6 +32,8 @@
 !
 ! bash command to see what features that are supported by your terminal
 ! infocmp -1 | sed -nu 's/^[ \000\t]*//;s/[ \000\t]*$//;/[^ \t\000]\{1,\}/!d;/acsc/d;s/=.*,//p'|column -c80
+!
+! XTerm Color Names - https://critical.ch/xterm/
 
 
 
@@ -74,6 +76,24 @@ xterm*SaveLines:                    500
 XTerm.vt100.geometry:               80x50
 xterm*termtype:                     vt100
 xterm*ttyModes:                     intr ^c erase ^h susp ^@ dsusp ^@ kill ^u eof ^d
+
+! rxvt resources -------------------------------------------------------------
+URxvt.termName:                     rxvt-256color
+!URxvt.Background:                   gray
+!URxvt.Foreground:                   white
+URxvt.reverseVideo:                 True
+URxvt.geometry:                     80x30
+URxvt.scrollBar:                    true
+URxvt.saveLines:                    4095
+URxvt.font:                         xft:inconsolata:pixelsize=13
+!URxvt.font:                         xft:Monospace:pixelsize=11
+!URxvt.boldfont:                     xft:Monospace-Bold:pixelsize=11
+!URxvt.font:                         xft:bitstream vera sans mono:size=8:antialias=true
+!URxvt.boldFont:                     xft:bitstream vera sans mono:bold:size=8:antialias=true
+URxvt.urlLauncher:                  opera
+URxvt.scrollstyle:                  plain
+URxvt.borderColor:                  #000030
+URxvt.internalBorder:               1
 
 ! xclock resources ------------------------------------------------------------
 xclock*Foreground:                  black
