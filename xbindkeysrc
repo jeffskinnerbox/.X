@@ -42,7 +42,7 @@
     control + shift + q
 
 # Create a Xterm window when "control + mouse button 2" is pressed
-"gnome-terminal --geometry=80x24+800+500"
+"gnome-terminal --geometry=120+800+500"
     control + b:2
 
 # Do a Page Down when mouse left-side down button is pressed
