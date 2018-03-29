@@ -40,7 +40,8 @@ if [ -f $usermodmap ]; then
 fi
 
 # play a sound when you start the Xsession
-ogg123 /usr/share/sounds/ubuntu/stereo/desktop-login.ogg &
+#ogg123 /usr/share/sounds/ubuntu/stereo/desktop-login.ogg &
+#paplay /home/jeff/sound/dialup-modem-handshake.ogg &
 
 # place a Conky system monitoring display on the desktop background
 # delay so the window manager has time to come up
