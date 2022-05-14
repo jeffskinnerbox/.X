@@ -28,7 +28,7 @@ if [ -f $sysresources ]; then
 fi
 
 if [ -f $sysmodmap ]; then
-    /usr/bin/xmodmap $sysmodmap
+    /usr/bin/xmodmap $sysmodma
 fi
 
 if [ -f $userresources ]; then
@@ -45,13 +45,13 @@ fi
 
 # place a Conky system monitoring display on the desktop background
 # delay so the window manager has time to come up
-( sleep 5 ;
-if [ "$(wmctrl -m | grep Name | awk '{ print $2 }')" == "i3" ]; then   # check for type of window manager
-    cp $HOME/.conky/src/ubuntu-i3-conkyrc $HOME/.conky/conkyrc
-else
-    cp $HOME/.conky/src/ubuntu-conkyrc $HOME/.conky/conkyrc
-fi
-conky & ) &
+#( sleep 5 ;
+#if [ "$(wmctrl -m | grep Name | awk '{ print $2 }')" == "i3" ]; then   # check for type of window manager
+#    cp $HOME/.conky/src/ubuntu-i3-conkyrc $HOME/.conky/conkyrc
+#else
+#    cp $HOME/.conky/src/ubuntu-conkyrc $HOME/.conky/conkyrc
+#fi
+#conky & ) &
 
 # terminal emulation for accessing a UNIX shell in the GNOME environment.
 #gnome-terminal --geometry=80x24+600+300 &
